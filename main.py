@@ -1,5 +1,6 @@
 import os
-from constants import *
+from constants import INIT_MENU, INPUT_AMOUNT, INPUT_DATE, ERROR_MSG_WRONG_FORMAT
+
 import utils
 import inputs
 
