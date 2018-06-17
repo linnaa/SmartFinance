@@ -5,26 +5,25 @@ import datetime
 
 def inputAmount():
     amount = 0
+    os.system('cls')
     while True:
-        os.system('cls')
         amount = input(INPUT_AMOUNT)
         try:
             amount = float(amount)
             break
         except:
             print(ERROR_MSG_WRONG_FORMAT)
-            input()
     return amount
 
 
 def inputDate():
     date = 0
+    os.system('cls')
     while True:
-        os.system('cls')
-        date = input('input the date in YYYY-MM-DD format: ')
+        date = input(INPUT_DATE)
         try:
-            date = datetime.datetime.strptime(date, '%y-%m-%d')
+            date = datetime.datetime.strptime(date, '%d.%m.%Y')
             break
         except ValueError:
-            print("Incorrect data format, should be YYYY-MM-DD")
-            input()
+            print(ERROR_MSG_WRONG_FORMAT)
+    return date
