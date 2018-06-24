@@ -1,5 +1,5 @@
 import os
-from constants import INIT_MENU, INPUT_AMOUNT, INPUT_DATE, ERROR_MSG_WRONG_FORMAT
+from constants import INIT_MENU, INPUT_AMOUNT, INPUT_DATE, INPUT_CATEGORY, ERROR_MSG_WRONG_FORMAT
 
 import utils
 import inputs
@@ -13,7 +13,8 @@ def chooseMenu():
 def addCheque():
     amount = inputs.inputAmount()
     date = inputs.inputDate()
-    utils.printData(amount, date)
+    category = inputs.inputCategory()
+    utils.printData(amount, date, category)
 
 
 def main():
