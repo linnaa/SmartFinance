@@ -1,6 +1,6 @@
 INIT_MENU = "1. Добавить чек\n2. Удалить чек\n3. Добавить категорию\n4. Удалить категорию\n5. Отчеты\n6. Выход\n"
 INPUT_AMOUNT = 'Input amount\n'
-INPUT_DATE = 'Input date in dd.mm.yyyy format\n'
+INPUT_DATE = 'Input "t" for today or any date in dd.mm.yyyy format\n'
 INPUT_CATEGORY = {
     1: 'Еда',
     2: 'Косметика',

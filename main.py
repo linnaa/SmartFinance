@@ -12,9 +12,9 @@ def chooseMenu():
 
 def addCheque():
     amount = inputs.inputAmount()
-    date = inputs.inputDate()
+    day = inputs.inputDate()
     category = inputs.inputCategory()
-    utils.printData(amount, date, category)
+    utils.printData(amount, day, category)
 
 
 def main():

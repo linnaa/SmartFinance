@@ -1,5 +1,5 @@
-def printData(amount, date, category):
+def printData(amount, day, category):
     print('New bill added:')
     print('amount: {0}'.format(amount))
-    print('date: ', date)
+    print('date: ', day)
     print('category: ', category)

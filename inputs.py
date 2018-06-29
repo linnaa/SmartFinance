@@ -17,16 +17,23 @@ def inputAmount():
 
 
 def inputDate():
-    date = 0
+    day = 0
     os.system('cls')
     while True:
-        date = input(INPUT_DATE)
+        day = input(INPUT_DATE)
         try:
-            date = datetime.datetime.strptime(date, '%d.%m.%Y')
+            if day == 't':
+                day = datetime.date.today()
+            else:
+                day = datetime.datetime.strptime(day, '%d.%m.%Y')
             break
         except ValueError:
             print(ERROR_MSG_WRONG_FORMAT)
-    return date
+    return day
+
+
+# добавить ввод сегодняшней даты
+# переформатировать под ввод даты и нескольких чеков
 
 
 def inputCategory():

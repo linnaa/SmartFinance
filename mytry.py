@@ -1,25 +1,20 @@
-import os
-from constants import INIT_MENU, INPUT_AMOUNT, INPUT_DATE, ERROR_MSG_WRONG_FORMAT
+INIT_MENU = [
+    "1. Добавить чек\n", "2. Удалить чек\n", "3. Добавить категорию\n",
+    "4. Удалить категорию\n", "5. Отчеты\n", "6. Выход\n"
+]
 
-import utils
-import inputs
 
-
-def chooseMenu():
+def inputDate():
+    day = 0
     os.system('cls')
-    return int(input(INIT_MENU))
-
-
-def addCheque():
-    amount = inputs.inputAmount()
-    date = inputs.inputDate()
-    utils.printData(amount, date)
-
-
-def main():
-    choice = [addCheque(), "to be added", "to be added"]
-    return choice[(chooseMenu()) - 1]
-
-
-# START PROGRAMM
-main()
+    while True:
+        day = input(INPUT_DATE)
+        try:
+            if day == 't':
+                day = datetime.date.today()
+            else:
+                day = datetime.datetime.strptime(day, '%d.%m.%Y')
+            break
+        except ValueError:
+            print(ERROR_MSG_WRONG_FORMAT)
+    return day
