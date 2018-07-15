@@ -3,19 +3,6 @@ from constants import INIT_MENU, INPUT_AMOUNT, INPUT_DATE, INPUT_CATEGORY, ERROR
 import datetime
 
 
-def inputAmount():
-    amount = 0
-    os.system('cls')
-    while True:
-        amount = input(INPUT_AMOUNT)
-        try:
-            amount = float(amount)
-            break
-        except:
-            print(ERROR_MSG_WRONG_FORMAT)
-    return amount
-
-
 def inputDate():
     day = 0
     os.system('cls')
@@ -32,7 +19,19 @@ def inputDate():
     return day
 
 
-# добавить ввод сегодняшней даты
+def inputAmount():
+    amount = 0
+    os.system('cls')
+    while True:
+        amount = input(INPUT_AMOUNT)
+        try:
+            amount = float(amount)
+            break
+        except:
+            print(ERROR_MSG_WRONG_FORMAT)
+    return amount
+
+
 # переформатировать под ввод даты и нескольких чеков
 
 
